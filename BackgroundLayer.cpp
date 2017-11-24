@@ -6,7 +6,7 @@ BackgroundLayer::BackgroundLayer(void)
 
 bool BackgroundLayer::init()
 {
-     if (!CCLayer::init())
+	if (!CCLayer::init())
 	{
 		return false;
 	}

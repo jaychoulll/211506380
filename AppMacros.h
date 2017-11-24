@@ -6,7 +6,6 @@
 /* For demonstrating using one design resolution to match different resources,
    or one resource to match different design resolutions.
 
-
    [Situation 1] Using one design resolution to match different resources.
      Please look into Appdelegate::applicationDidFinishLaunching.
      We check current device frame size to decide which resource need to be selected.

@@ -10,6 +10,6 @@ public:
 	BackgroundLayer(void);
 	CREATE_FUNC(BackgroundLayer)
 	virtual bool init();
-	 virtual ~BackgroundLayer(void);
+	virtual ~BackgroundLayer(void);
 };
 
