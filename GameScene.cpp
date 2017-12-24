@@ -142,12 +142,18 @@ void GameScene::fishWillBeCaught(Fish* fish)
 {
 	float weaponPercents[k_Cannon_Count] = { 0.3, 0.6, 0.7, 0.8, 0.9, 1.0, 1.1 };
 	float fishPercents[	k_Fish_Type_Count] = { 1, 0.9, 0.8, 0.7, 0.6, 0.5, 0.4 };
-	int cannonType = _cannonLayer->getWeapon()->getCannonType();
-	int fishType = fish->getType();
-	if(CCRANDOM_0_1() < 1.1)
+	int _cannonType = _cannonLayer->getWeapon()->getCannonType();
+	int _fishType = fish->getType();
+	float percentage =(float)_cannonType * _fishType;
+	if(CCRANDOM_0_1() < percentage)//1.1
 	{
 		fish->beCaught();
+		//
+		int reward = STATIC_DATA_INT(CCString::createWithFormat(STATIC_DATA_STRING("reward_format"),_fishType)->getCString());
+		alterGold(reward);
+		//
 	}
+	
 }
 
 void GameScene::checkOutCollisionBetweenFishesAndFishingNet(Bullet* bullet)
