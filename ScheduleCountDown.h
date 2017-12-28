@@ -15,6 +15,11 @@ public:
 	void schedulePerSecond(float delta);
 protected:
 	bool init (ScheduleCounterDelegate* target, int perimeter, bool loop);
+	
+	/*ScheduleCounterDelegate* _target;
+	int _currentTime;
+	int _maxTime;
+	bool _loop;*/
 private:
 
 };
